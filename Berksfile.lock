@@ -1,0 +1,117 @@
+DEPENDENCIES
+  application
+    git: git://github.com/poise/application.git
+    revision: 1a45b2eada6221385cad49b65717154bf4be9fd0
+    tag: 3.0.0
+  application_nginx
+    git: git://github.com/poise/application_nginx.git
+    revision: c388f1289b03ea487425e39f4a3e18caeac72fcf
+    branch: 2.0.0
+  application_python
+    git: git://github.com/poise/application_python.git
+    revision: 8deb61caa999866843368e9bd0c57250419e5a02
+    ref: 8deb61c
+  apt
+    git: git://github.com/opscode-cookbooks/apt.git
+    revision: 01d81a0c298e46616d3528a90cc9054d6ad49a53
+    tag: v2.6.1
+  bluepill
+    git: git://github.com/opscode-cookbooks/bluepill.git
+    revision: 409ae205388deb4ff0cf470298797615d8a3a386
+    tag: v2.3.0
+  build-essential
+  cron
+    git: git://github.com/opscode-cookbooks/cron.git
+    revision: cf8711d4b254e7ca66b43dc57d62f8fd80f4e61e
+    tag: v1.6.1
+  logrotate
+    git: git://github.com/stevendanna/logrotate.git
+    revision: fd08cfde4c8566c4c5ac36672029bcc94f34be1e
+    tag: v1.7.0
+  mysql
+    git: git://github.com/opscode-cookbooks/mysql.git
+    revision: dcb5ea6ea7f4309547feb9e68763634eeaf3e868
+    tag: v5.5.0
+  nginx
+    git: git://github.com/miketheman/nginx.git
+    revision: 0d53f57b7f8d84742e446d31fa42fabc0543eadd
+    tag: v2.7.4
+  openssh
+    git: git://github.com/opscode-cookbooks/openssh.git
+    revision: 1a87fb85b7f8f0b19a6ffeef4dd47ecdb5668749
+    ref: 1a87fb8
+  openssl
+    git: git://github.com/opscode-cookbooks/openssl.git
+    revision: 3cb19ddd8f39cddfde87f4e1c3441860084ecc33
+    tag: v2.0.2
+  poise
+    git: git://github.com/poise/poise.git
+    revision: 0765785e42b16f96a8262b6d4bb8b7b0bd84ba96
+    tag: v1.0.10
+  python
+    git: git://github.com/poise/python.git
+    revision: 01e511b8564aaf7bae99aa96bfc568dcbd289394
+    ref: 01e511b
+  rsyslog
+    git: git://github.com/opscode-cookbooks/rsyslog.git
+    revision: e8935ebff0b64a02044f9bd8390294ed6de14c13
+    tag: 1.13.0
+  runit
+    git: git://github.com/hw-cookbooks/runit.git
+    revision: 0450d27ac77864f5430ff98d83036aba233f84f4
+    tag: v1.2.0
+  sqlite
+    git: git://github.com/opscode-cookbooks/sqlite.git
+    revision: a0f77b1e42a55064ca9cd86b00e9077abbb381ac
+    tag: v1.1.0
+
+GRAPH
+  application (3.0.0)
+  application_nginx (2.0.0)
+    application (~> 3.0)
+    nginx (>= 0.0.0)
+  application_python (3.0.1)
+    application (~> 3.0)
+    gunicorn (>= 0.0.0)
+    python (>= 0.0.0)
+    supervisor (>= 0.0.0)
+  apt (2.6.1)
+  bluepill (2.3.0)
+    rsyslog (>= 0.0.0)
+  build-essential (2.1.3)
+  chef-sugar (2.5.0)
+  cron (1.6.1)
+  gunicorn (1.2.0)
+    python (>= 0.0.0)
+  iptables (0.14.1)
+  logrotate (1.7.0)
+  mysql (5.5.0)
+    yum-mysql-community (>= 0.0.0)
+  nginx (2.7.4)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 2.0)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  ohai (2.0.1)
+  openssh (1.3.5)
+    iptables (>= 0.0.0)
+  openssl (2.0.2)
+    chef-sugar (>= 0.0.0)
+  poise (1.0.10)
+  python (1.4.7)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  rsyslog (1.13.0)
+  runit (1.2.0)
+    build-essential (>= 0.0.0)
+    yum (>= 0.0.0)
+  sqlite (1.1.0)
+  supervisor (0.4.12)
+    python (>= 0.0.0)
+  yum (3.5.2)
+  yum-epel (0.6.0)
+    yum (~> 3.0)
+  yum-mysql-community (0.1.11)
+    yum (>= 3.0)
